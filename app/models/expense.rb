@@ -9,4 +9,7 @@ class Expense < ActiveRecord::Base
   # Money
   monetize :amount_cents
 
+  # Tags
+  acts_as_taggable
+
 end

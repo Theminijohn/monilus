@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'font-awesome-rails'
+gem 'acts-as-taggable-on'
 
 # Money
 gem 'money-rails'
