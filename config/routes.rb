@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     sign_out: 'logout',
     sign_up: 'register' }
 
-  # Strains
   # Expenses
   resources :expenses
+
+  # Tags
+  get 'tags/:tag' => 'expenses#index', as: :tag
 end

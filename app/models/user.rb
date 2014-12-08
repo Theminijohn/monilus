@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   # Associations
   has_many :expenses
+
+  acts_as_tagger
 end

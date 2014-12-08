@@ -1,9 +1,13 @@
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :set_expense, only: [:show, :edit, :update, :destroy]
 
   def index
-    @expenses = Expense.all
+    if params[:tag]
+      @expenses = current_user.expenses.tagged_with(params[:tag])
+    else
+      @expenses = current_user.expenses.all
+    end
   end
 
   def show
