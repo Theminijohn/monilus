@@ -10,5 +10,10 @@
   <%= humanized_money_with_symbol @expense.amount %>
 </p>
 
+<p>
+  <strong> Tags:</strong>
+  <%= raw @expense.tag_list.map {|t| link_to t, tag_path(t)}.join('') %>
+</p>
+
 <%= link_to 'Edit', edit_expense_path(@expense) %> |
 <%= link_to 'Back', expenses_path %>
